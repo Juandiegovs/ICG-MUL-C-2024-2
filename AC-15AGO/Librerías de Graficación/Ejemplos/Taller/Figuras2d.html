@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trazado de la figura</title>
+    <style>
+        /* Estilos generales para el cuerpo del documento */
+        body {
+            font-family: Arial, sans-serif; /* Fuente utilizada */
+            margin: 20px; /* Margen alrededor del contenido */
+        }
+        /* Estilo para las opciones, con un margen inferior para separación */
+        .option {
+            margin-bottom: 10px; /* Espacio entre las opciones */
+        }
+        /* Estilo para el canvas donde se dibujarán las figuras */
+        canvas {
+            border: 1px solid black; /* Borde del canvas */
+            margin-top: 20px; /* Margen superior para separación */
+        }
+    </style>
+</head>
+<body>
+    <h1>Trazado de la figura</h1>
+
+    <!-- Opción para seleccionar la figura -->
+    <div class="option">
+        <label for="figura"><strong>Figura:</strong></label>
+        <select id="figura">
+            <option value="cuadrado">Cuadrado</option>
+            <option value="triangulo">Triángulo</option>
+            <option value="circulo">Círculo</option>
+        </select>
+    </div>
+
+    <!-- Opción para seleccionar el color -->
+    <div class="option">
+        <label><strong>Color:</strong></label>
+        <select id="color">
+            <option value="red">Rojo</option>
+            <option value="yellow">Amarillo</option>
+            <option value="violet">Violeta</option>
+            <option value="blue">Azul</option>
+            <option value="orange">Naranja</option>
+        </select>
+    </div>
+
+    <!-- Opción para seleccionar el tipo de coordenadas -->
+    <div class="option">
+        <label><strong>Coordenadas:</strong></label>
+        <input type="radio" id="polar" name="coordenadas" value="polar">
+        <label for="polar">Polar</label>
+        <input type="radio" id="cartesiana" name="coordenadas" value="cartesiana">
+        <label for="cartesiana">Cartesiana</label>
+    </div>
+
+    <!-- Entrada para coordenadas en X -->
+    <div class="option">
+        <label for="coordenadasX"><strong>Coordenadas en X:</strong></label>
+        <input type="text" id="coordenadasX" placeholder="Digite coordenadas en X">
+    </div>
+
+    <!-- Entrada para coordenadas en Y -->
+    <div class="option">
+        <label for="coordenadasY"><strong>Coordenadas en Y:</strong></label>
+        <input type="text" id="coordenadasY" placeholder="Digite coordenadas en Y">
+    </div>
+
+    <!-- Botón para dibujar la figura -->
+    <button id="dibujar">Dibujar</button>
+
+    <!-- Canvas donde se dibujarán las figuras -->
+    <canvas id="canvas" width="400" height="400"></canvas>
+</body>
+</html>
