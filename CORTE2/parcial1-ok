@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Dibujo de Polígono Regular</title> 
+    <style>
+        canvas {
+            border: 1px solid black; /* Estilo para el canvas, agregando un borde negro */
+        }
+    </style>
+</head>
+<body>
+    <h1>Dibuja un Polígono Regular</h1> 
+    
+    <label for="lados">Número de lados (n):</label>
+    <input type="number" id="lados" min="3" required> 
+    <br>
+
+    <label for="lado">Longitud del lado (L):</label>
+    <input type="number" id="lado" required> 
+    <br>
+
+    <label for="tipoCoordenadas">Tipo de coordenadas:</label>
+    <select id="tipoCoordenadas" onchange="cambiarCampos()"> 
+        <option value="cartesianas">Cartesianas</option> 
+        <option value="polares">Polares</option> 
+    </select>
+    <br>
+
+    <div id="coordenadasCartesianas">
+        <label for="centroX">Coordenada X del centro:</label>
+        <input type="number" id="centroX" required> 
+        <br>
+        <label for="centroY">Coordenada Y del centro:</label>
+        <input type="number" id="centroY" required> 
+    </div>
+
+    <div id="coordenadasPolares" style="display: none;"> 
+        <label for="angulo">Ángulo (en grados):</label>
+        <input type="number" id="angulo" required> 
+        <br>
+        <label for="radio">Radio:</label>
+        <input type="number" id="radioCentro" required> 
+    </div>
+
+    <br>
+    <label for="trazar">Tipo de figura a trazar:</label>
+    <select id="trazar"> 
+        <option value="poligono">Polígono</option> 
+        <option value="apotema">Círculo (Apotema)</option> 
+    </select>
+    <br>
+
+    <button onclick="dibujarPoligono()">Dibujar</button> 
+    <br>
+    
+    <canvas id="miCanvas" width="500" height="500"></canvas> 
+
+    <script src="Parcial1ok.js"></script> 
+</body>
+</html>
