@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polígono Rasterizado Sin Centroide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #controls {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dibuja un Polígono con Puntos Aleatorios</h1>
+    <div id="controls">
+        <button onclick="generarPoligono()">Generar Polígono</button>
+        <p id="tipoPoligono"></p>
+    </div>
+    <canvas id="canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+
+    <script src="rasterizado.js"></script>
+</body>
+</html>
+
+
